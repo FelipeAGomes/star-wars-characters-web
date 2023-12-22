@@ -20,7 +20,6 @@
   
       const searchCharacters = () => {
         if (text.value.trim() !== '') {
-          // Navigate to the CharacterDetails page with the query parameter
           router.push({ name: 'CharacterDetails', params: { name: text.value } });
         }
       };

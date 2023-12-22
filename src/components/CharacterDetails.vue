@@ -1,12 +1,12 @@
 <template>
   <router-link to="/" class="back-button">
-    Back
+    <q-btn outline style="color: yellow;" label="Back" />
   </router-link>
   <div class="details-page">
     <div v-if="loading" class="loading-message">
       <q-spinner-hourglass
         color="yellow"
-        size="4em"
+        size="3em"
       />
     </div>
     <div v-else-if="characterDetails" class="details-container">
@@ -50,6 +50,7 @@ export default {
         this.loading = true;
         const characterName = this.$route.params.name;
         const response = await axios.get(`https://localhost:7160/api/Characters/${characterName}`);
+        console.log('response',response)
         
         if (response.data && response.data.length > 0) {
           this.characterDetails = response.data;
@@ -63,9 +64,6 @@ export default {
         this.loading = false;
       }
     }
-    function characterImage(character) {
-      return `https://placekitten.com/200/300?random=${character.name}`;
-    }
     function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
@@ -73,7 +71,6 @@ export default {
       fitModes: [ 'cover' ],
       loading,
       characterDetails,
-      characterImage,
       capitalizeFirstLetter,
       fetchCharacterDetails,
       currentReceived

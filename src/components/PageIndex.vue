@@ -5,7 +5,7 @@
     <div v-if="currentLoading" class="loading-message">
       <q-spinner-hourglass
         color="yellow"
-        size="4em"
+        size="3em"
       />
     </div>
     <div v-else-if="receivedData" class="characters">
@@ -92,7 +92,6 @@ export default {
       current,
       receivedData,
       changePage,
-      characterImage: (character) => `https://placekitten.com/200/300?random=${character.name}`,
       currentReceived,
       loading,
       currentLoading
