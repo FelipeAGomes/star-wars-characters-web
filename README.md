@@ -19,6 +19,7 @@ The search bar allows you to search for characters by name. The search is dynami
 #### Quasar Framework
 ## Back-End
 #### .NET Core
+#### [API](https://github.com/FelipeAGomes/star-wars-characters)
 ## API
 #### [Star Wars API](https://swapi.dev/)
 
