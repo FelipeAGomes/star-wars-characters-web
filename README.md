@@ -18,7 +18,7 @@ The search bar allows you to search for characters by name. The search is dynami
 #### Vue.js 3
 #### Quasar Framework
 ## Back-End
-#### .NET Core
+#### .NET 7.0
 #### [API](https://github.com/FelipeAGomes/star-wars-characters)
 ## API
 #### [Star Wars API](https://swapi.dev/)
@@ -30,7 +30,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+cd backend
 ```
 
 ### Compiles and minifies for production
